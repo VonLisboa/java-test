@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
 	<!-- parent pom -->
-    <groupId>com.etldata</groupId>
+    <groupId>com.etldata.app</groupId>
     <artifactId>java-test</artifactId>
     <packaging>pom</packaging>
 	<version>1.0</version>
@@ -43,4 +43,20 @@
         </dependency>
         
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.1</version>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
