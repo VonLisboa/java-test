@@ -52,7 +52,7 @@ public class GenericRestClient {
       @SuppressWarnings("unchecked")
       Map<String, ?> json = jsonAdapter.fromJson(response.body().source());
       
-      if(dotenv.get("DEBUG") != "true"){
+      if(dotenv.get("DEBUG") == "true"){
         System.out.println(json.toString());
       }
 
