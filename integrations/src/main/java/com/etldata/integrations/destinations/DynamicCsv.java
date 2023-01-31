@@ -51,7 +51,7 @@ public class DynamicCsv {
           .writeValue(new File("meteo"+ NOW + ".csv"), json);        
     }
 
-    public void createParentTable(String tableName, ArrayList<?> subTableIteration) throws StreamWriteException, DatabindException, IOException {     
+    private void createParentTable(String tableName, ArrayList<?> subTableIteration) throws StreamWriteException, DatabindException, IOException {     
         /* first search for map first
 
         subTableIteration.forEach(it -> {
@@ -71,7 +71,7 @@ public class DynamicCsv {
           
     }
 
-    public void createParentTableMap(String tableName, Map<String, Object> subTableIteration) throws StreamWriteException, DatabindException, IOException {     
+    private void createParentTableMap(String tableName, Map<String, Object> subTableIteration) throws StreamWriteException, DatabindException, IOException {     
         Builder csvSchemaBuilder = CsvSchema.builder();
         Map<String, Object> json = new HashMap<String, Object>();
 
